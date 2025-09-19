@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		085B6CF52E7B746D0066BA7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 085B6CF42E7B746D0066BA7C /* UIKit.framework */; platformFilters = (ios, xros, ); };
+		085B6CFB2E7B752B0066BA7C /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = 085B6CFA2E7B752B0066BA7C /* FirebaseAI */; };
+		085B6CFD2E7B752B0066BA7C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 085B6CFC2E7B752B0066BA7C /* FirebaseAnalytics */; };
+		085B6CFF2E7B752B0066BA7C /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 085B6CFE2E7B752B0066BA7C /* FirebaseAppCheck */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		085B6CBB2E7B740B0066BA7C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +34,33 @@
 		085B6CAD2E7B740A0066BA7C /* PolaroidMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolaroidMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		085B6CBA2E7B740B0066BA7C /* PolaroidMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolaroidMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		085B6CC42E7B740B0066BA7C /* PolaroidMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolaroidMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		085B6CF42E7B746D0066BA7C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		085B6D072E7B76F50066BA7C /* Exceptions for "PolaroidMe" folder in "PolaroidMeTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = 085B6CB92E7B740B0066BA7C /* PolaroidMeTests */;
+		};
+		085B6D082E7B76F50066BA7C /* Exceptions for "PolaroidMe" folder in "PolaroidMeUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = 085B6CC32E7B740B0066BA7C /* PolaroidMeUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		085B6CAF2E7B740A0066BA7C /* PolaroidMe */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				085B6D072E7B76F50066BA7C /* Exceptions for "PolaroidMe" folder in "PolaroidMeTests" target */,
+				085B6D082E7B76F50066BA7C /* Exceptions for "PolaroidMe" folder in "PolaroidMeUITests" target */,
+			);
 			path = PolaroidMe;
 			sourceTree = "<group>";
 		};
@@ -52,6 +81,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085B6CFF2E7B752B0066BA7C /* FirebaseAppCheck in Frameworks */,
+				085B6CF52E7B746D0066BA7C /* UIKit.framework in Frameworks */,
+				085B6CFB2E7B752B0066BA7C /* FirebaseAI in Frameworks */,
+				085B6CFD2E7B752B0066BA7C /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +111,7 @@
 				085B6CAF2E7B740A0066BA7C /* PolaroidMe */,
 				085B6CBD2E7B740B0066BA7C /* PolaroidMeTests */,
 				085B6CC72E7B740B0066BA7C /* PolaroidMeUITests */,
+				085B6CF32E7B746D0066BA7C /* Frameworks */,
 				085B6CAE2E7B740A0066BA7C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +124,14 @@
 				085B6CC42E7B740B0066BA7C /* PolaroidMeUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		085B6CF32E7B746D0066BA7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				085B6CF42E7B746D0066BA7C /* UIKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +154,9 @@
 			);
 			name = PolaroidMe;
 			packageProductDependencies = (
+				085B6CFA2E7B752B0066BA7C /* FirebaseAI */,
+				085B6CFC2E7B752B0066BA7C /* FirebaseAnalytics */,
+				085B6CFE2E7B752B0066BA7C /* FirebaseAppCheck */,
 			);
 			productName = PolaroidMe;
 			productReference = 085B6CAD2E7B740A0066BA7C /* PolaroidMe.app */;
@@ -195,6 +240,9 @@
 			);
 			mainGroup = 085B6CA42E7B740A0066BA7C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				085B6CF92E7B752B0066BA7C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 085B6CAE2E7B740A0066BA7C /* Products */;
 			projectDirPath = "";
@@ -408,7 +456,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
@@ -418,7 +466,8 @@
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -452,7 +501,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
@@ -462,7 +511,8 @@
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -615,6 +665,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		085B6CF92E7B752B0066BA7C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		085B6CFA2E7B752B0066BA7C /* FirebaseAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 085B6CF92E7B752B0066BA7C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAI;
+		};
+		085B6CFC2E7B752B0066BA7C /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 085B6CF92E7B752B0066BA7C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		085B6CFE2E7B752B0066BA7C /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 085B6CF92E7B752B0066BA7C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 085B6CA52E7B740A0066BA7C /* Project object */;
 }
